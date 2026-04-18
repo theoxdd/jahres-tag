@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 A Little Surprise For You</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="particles" aria-hidden="true"></div>
+
+<button id="audio-btn" title="Musik umschalten" aria-label="Musik umschalten">🎵</button>
+<audio id="bgm" loop>
+</audio>
+
+
+<section class="screen active" id="screen-0">
+    <div class="start-frame">
+        <div class="deco-row">✨ 💖 ✨</div>
+        <h1 class="press-start main-title">
+            Eine kleine<br>Über&shy;raschung<br>für dich
+        </h1>
+        <div class="deco-row">🌟 🎀 🌟</div>
+        <p class="nunito subtitle">
+            Ich habe etwas ganz Besonderes für dich vorbereitet…<br>
+            Bist du bereit? Es wird dir bestimmt gefallen ^^
+        </p>
+        <button class="btn-kawaii" id="btn-start">▶ Start 💖</button>
+    </div>
+</section>
+
+
+<section class="screen" id="screen-1">
+    <div class="scene-bg">
+        <div class="scene-sky"></div>
+        <div class="scene-ground"></div>
+    </div>
+
+    <div class="stage">
+        <div class="char-container char-center appear-pop" id="s1-lola">
+            <div class="char-lola"></div>
+            <div class="char-name-tag">Lola 💖</div>
+        </div>
+    </div>
+
+    <div class="dialogue-box" id="dlg-box-1">
+        <span class="dlg-icon">💌</span>
+        <p class="dlg-text nunito" id="dlg-text-1"></p>
+        <button class="btn-next hidden" id="btn-s1">Weiter ➡️</button>
+    </div>
+</section>
+
+
+<section class="screen" id="screen-2">
+    <div class="scene-bg">
+        <div class="scene-sky"></div>
+        <div class="scene-ground"></div>
+    </div>
+
+    <div class="stage">
+        <div class="char-container char-left slide-in-left" id="s2-kira">
+            <div class="char-kira"></div>
+            <div class="char-name-tag">Kira ✨</div>
+        </div>
+        <div class="char-container char-center" id="s2-lola">
+            <div class="char-lola"></div>
+            <div class="char-name-tag">Lola 💖</div>
+        </div>
+        <div class="char-container char-right slide-in-right" id="s2-alex">
+            <div class="char-alex"></div>
+            <div class="char-name-tag">Alex 🌸</div>
+        </div>
+    </div>
+
+    <div class="dialogue-box" id="dlg-box-2">
+        <span class="dlg-icon">✨</span>
+        <p class="dlg-text nunito" id="dlg-text-2"></p>
+        <button class="btn-next hidden" id="btn-s2">Weiter ➡️</button>
+    </div>
+</section>
+
+
+<section class="screen" id="screen-3">
+    <div class="minigame-header">
+        <h2 class="press-start mini-title">Sammel die<br>Herzen! 💖</h2>
+        <div class="heart-score nunito">
+            <span id="collected">0</span>
+            <span>/5</span>
+        </div>
+    </div>
+
+    <div class="minigame-area" id="game-area"></div>
+
+    <p class="hint-text nunito">Klick auf alle 5 schwebenden Herzen ✨</p>
+    <button class="btn-kawaii hidden" id="btn-game-next">Weiter ✨</button>
+</section>
+
+
+<section class="screen magical-screen" id="screen-4">
+    <div class="scene-bg">
+        <div class="scene-sky magical-sky"></div>
+        <div class="scene-ground magical-ground"></div>
+    </div>
+
+    <div class="magic-sparkles" id="magic-sparkles" aria-hidden="true"></div>
+
+    <div class="stage">
+        <div class="char-container char-far-left" id="s4-kira">
+            <div class="char-kira"></div>
+        </div>
+        <div class="char-container char-left" id="s4-lola">
+            <div class="char-lola"></div>
+        </div>
+        <div class="char-container char-right" id="s4-alex">
+            <div class="char-alex"></div>
+        </div>
+        <div class="char-container char-center miku-entrance" id="s4-miku">
+            <div class="miku-glow-ring"></div>
+            <div class="char-miku"></div>
+            <div class="char-name-tag miku-name-tag">✨ Hatsune Miku ✨</div>
+        </div>
+    </div>
+
+    <div class="dialogue-box magical-dlg" id="dlg-box-4">
+        <span class="dlg-icon">🎶</span>
+        <p class="dlg-text nunito" id="dlg-text-4"></p>
+        <button class="btn-next hidden" id="btn-s4">Weiter ➡️</button>
+    </div>
+</section>
+
+
+<section class="screen" id="screen-5">
+    <div class="giftbox-scene">
+        <p class="press-start gift-prompt">
+            Etwas<br>Besonderes<br>wartet… 🎁
+        </p>
+
+        <div class="gift-wrapper">
+            <div class="gift-box" id="gift-box">
+                <div class="gift-lid" id="gift-lid">
+                    <div class="lid-bow">🎀</div>
+                    <div class="lid-ribbon-h"></div>
+                </div>
+                <div class="gift-body">
+                    <div class="gift-ribbon-v"></div>
+                    <div class="gift-stripe"></div>
+                </div>
+            </div>
+
+            <div class="gift-burst hidden" id="gift-burst">
+                <span>✨</span><span>🎵</span><span>💖</span>
+                <span>🌟</span><span>🎶</span><span>💫</span>
+                <span>🎀</span><span>⭐</span>
+            </div>
+        </div>
+
+        <p class="hint-text nunito gift-click-hint">Klick auf die Box… 🎁</p>
+    </div>
+</section>
+
+
+<section class="screen" id="screen-6">
+    <div class="final-bg" aria-hidden="true"></div>
+
+    <div class="reveal-stage">
+        <div class="ticket-card" id="ticket-card">
+            <div class="ticket-header">
+                <span>🎟️</span>
+                <span class="ticket-event-name press-start">HATSUNE MIKU</span>
+                <span>🎟️</span>
+            </div>
+
+            <div class="ticket-message nunito" id="ticket-message"></div>
+
+            <div class="ticket-divider">
+                <span>✦</span><span>✦</span><span>✦</span><span>✦</span><span>✦</span>
+            </div>
+
+            <a href="DEIN_EVENTIM_LINK_HIER" id="ticket-link" class="btn-ticket" target="_blank" rel="noopener noreferrer">
+                🎟️ Get Your Surprise ✨
+            </a>
+
+            <p class="love-note nunito">Ich liebe dich so sehr, Lola 💖</p>
+        </div>
+
+        <div class="final-chars" id="final-chars">
+            <div class="final-char bounce-1"><div class="char-kira"></div></div>
+            <div class="final-char bounce-2"><div class="char-lola"></div></div>
+            <div class="final-char bounce-3"><div class="char-miku"></div></div>
+            <div class="final-char bounce-4"><div class="char-alex"></div></div>
+        </div>
+    </div>
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>
